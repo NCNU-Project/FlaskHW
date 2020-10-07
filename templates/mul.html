@@ -1,0 +1,13 @@
+{% macro mul(i, j)%}
+<td>{{j}} * {{i}} = {{j * i}}</td>
+{% endmacro %}
+
+<table>
+    {{% for i in n %}}
+    <TR>
+        {{% for j in n %}}
+            {{mul(i, j)}}
+        {{% endfor %}}
+    </TR>
+    {{% endfor %}}
+</table>
