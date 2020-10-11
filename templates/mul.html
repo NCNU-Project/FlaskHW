@@ -1,13 +1,24 @@
-{% macro mul(i, j)%}
-<td>{{j}} * {{i}} = {{j * i}}</td>
+<!-- CSS only -->
+<link rel="stylesheet" 
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
+crossorigin="anonymous">
+
+
+{% macro mul(i, j, color)%}
+<td bgcolor="{{color}}">{{i}} * {{j}} = {{j * i}}</td>
 {% endmacro %}
 
-<table>
-    {{% for i in n %}}
+<table border='1'>
+    {% for i in n %}
     <TR>
-        {{% for j in n %}}
-            {{mul(i, j)}}
-        {{% endfor %}}
+        {% for j in n %}
+            {% if (i + j) % 2 == 1%}
+                {{mul(j, i, "A022F2")}}
+            {% else %}
+                {{mul(j, i, "ffffff")}}
+            {% endif %}
+        {% endfor %}
     </TR>
-    {{% endfor %}}
+    {% endfor %}
 </table>

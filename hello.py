@@ -11,3 +11,8 @@ def index():
 @app.route('/user/<name>')
 def user(name):
     return render_template('user.html', name=name)
+
+
+@app.route('/mul/<int:n>')
+def mul(n):
+    return render_template('mul.html', n=range(1,n+1))
