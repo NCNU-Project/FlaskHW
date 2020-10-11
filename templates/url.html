@@ -1,0 +1,6 @@
+<H2>urls</H2>
+<OL>
+{% for item in urls%}
+<LI><A HREF = 'redirect/{{item[1]}}'>{{item[0]}}</A></LI>
+{% endfor %}
+</OL>
