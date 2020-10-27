@@ -1,0 +1,41 @@
+<form method=POST action = birthday>
+year: 
+<select name = yyyy>
+    {%for y in range(1950, 2021)%}
+        <option value={{y}}>{{y}}</option>
+    {% endfor %}
+</select>
+
+{% macro msim(m, str) %}
+    <option value={{m}}>{{str}}</option>
+{% endmacro %}
+
+month:
+<select name = mm>
+    {{msim(1, "Jan")}}
+    {{msim(2, "Feb")}}
+    {{msim(3, "Mar")}}
+    {{msim(4, "Apr")}}
+    {{msim(5, "May")}}
+    {{ msim(6, "Jun")}}
+    {{ msim(7, "Jul")}}
+    {{ msim(8, "Aug")}}
+    {{ msim(9, "Sep")}}
+    {{ msim(10, "Oct")}}
+    {{ msim(11, "Nov")}}
+    {{ msim(12, "Dec")}}
+</select>
+
+day:
+<select name = dd>
+{% for d in range(1, 32) %}
+    <option value={{d}}>{{d}}</option>
+{% endfor %}
+<select>
+ <input type = submit / >
+</form>
+
+<form action = birthday1 method = POST>
+  <input name = date type = date></input>
+  <input type = submit />
+</form>
