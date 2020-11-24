@@ -1,0 +1,29 @@
+commit e538dd67694757ab0854279d4e40b2df76c3aa02
+Author: ¸ê¤u¨t ²ø¤~½å <s108321036@lilina.csie.ncnu.edu.tw>
+Date:   Tue Oct 27 17:41:37 2020 +0800
+
+    hw3 and hw4 forms in /birthdayWeb
+
+commit c3189221a58ed1b0bf4bdfa892009f6ba511ccd8
+Author: ¸ê¤u¨t ²ø¤~½å <s108321036@lilina.csie.ncnu.edu.tw>
+Date:   Mon Oct 12 00:39:22 2020 +0800
+
+    hw2 redirect/to/other/website
+
+commit 54a738c7fd031f59f7cb6584a9eafaac47a93a4c
+Author: ¸ê¤u¨t ²ø¤~½å <s108321036@lilina.csie.ncnu.edu.tw>
+Date:   Sun Oct 11 19:15:41 2020 +0800
+
+    hw1 9*9mul
+
+commit 46a5dd3eece3615133269de476817f414597a012
+Author: Jerry <efficacy38@gmail.com>
+Date:   Wed Oct 7 14:30:19 2020 +0800
+
+    somefile upload
+
+commit 6c2f158e2218000013c499cc9791bbd0e53951ca
+Author: Jerry <efficacy38@gmail.com>
+Date:   Wed Oct 7 14:10:21 2020 +0800
+
+    first commit

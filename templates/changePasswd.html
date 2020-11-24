@@ -1,0 +1,17 @@
+{% macro quick_form(form) %}
+<form method = POST>
+    <TABLE>
+        {% for item in form %}
+            {% if item.type == 'CSRFTokenField'%}
+                {{ item() }}
+            {% elif item.type == 'SubmitField' %}
+                <TR><TD>{{form.submit()}}<TD><TR>
+            {% else %}
+                <TR><TD>{{ item.label }}</TD><TD>{{ item() }}</TD><TR>
+            {% endif %}
+        {% endfor %}
+    <TABLE>
+</form>
+{% endmacro %}
+
+{{quick_form(form)}}

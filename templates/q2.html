@@ -1,0 +1,31 @@
+{% macro q_form(form) %}
+<form method = POST>
+<TABLE>
+{% for item in form %}
+            {% if item.type == 'CSRFTokenField'%}
+                {{ item() }}
+            {% elif item.type == 'SubmitField' %}
+            <TR><TD align="right">{{form.submit()}}</TD><TR></TR>
+            {% elif item.type == 'RadioField'%}
+            <TR>
+              <TD>{{ item.label }}</TD>
+              <TD>
+                {% for subfield in item %}
+                {{subfield}} {{subfield.label}}
+                {% endfor %}
+              </TD>
+            </TR>
+            {% else %}
+                <TR><TD>{{ item.label }}</TD><TD>{{ item() }}</TD><TR>
+            {% endif %}
+        {% endfor %}
+    <TABLE>
+</form>
+{% endmacro %}
+
+<h1>表達力測試</h1>
+<p>
+不要經過思考,只需要根據你的第一反應,選擇最符合的答案.
+</p>
+{{q_form(form)}}
+

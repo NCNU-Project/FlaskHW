@@ -1,0 +1,53 @@
+<body><h1>測試結果分析</h1>
+
+  <ul>
+    <li> 非常符合 7 分 </li>
+    <li> 比較符合 5 分 </li>
+    <li> 不太確定 3 分 </li>
+    <li> 比較不符合 1 分 </li>
+    <li> 非常不符合 0 分 </li>
+  </ul>
+
+  <p>您的總分是 {{ point }} </p>
+
+  <table border="">
+      <tbody>
+        {% if point <= 15 %}
+            <tr style="background-color: pink">
+        {% else %}
+            <tr>
+        {% endif %}
+          <td> 0~15 </td> 
+          <td> 你的口語表達能力很差，需要針對性地重點提高，除了閱讀本章內容之外，你還需要多花時間去練習書中的公式。假以時日，你的口語表達能力會有很大的提升。 </td>
+        </tr>
+
+        {% if point > 15 and  point <= 45 %}
+            <tr style="background-color: pink">
+        {% else %}
+            <tr>
+        {% endif %}
+          <td> 16~45分 </td> 
+          <td> 你的口語表達能力一般，你需要在表達的某些方面進行提升。本章的內容將會對你有很大的幫助。 </td>
+        </tr>
+
+        {% if point > 45 and point <= 80 %}
+            <tr style="background-color: pink">
+        {% else %}
+            <tr>
+        {% endif %}
+          <td> 46~80分 </td> 
+          <td> 你的口語表達能力較好，口語表達對你來說不是難事。但如果你繼續閱讀本章的內容，相信會有錦上添花的作用。 </td>
+        </tr>
+
+        {% if point > 80 and point <= 105 %}
+            <tr style="background-color: pink">
+        {% else %}
+            <tr>
+        {% endif %}
+          <td> 81~105分 </td> 
+          <td> 你的口試表達能力非常好，你已經是講話的高手。如果你不願意花時間在這裡，可以跳到下一章。 </td>
+        </tr>
+
+      </tbody>
+  </table>
+</body>  

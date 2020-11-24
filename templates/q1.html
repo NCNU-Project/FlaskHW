@@ -1,0 +1,19 @@
+{% macro q_form(form) %}
+<form method = POST>
+<TABLE border>
+{% for item in form %}
+            {% if item.type == 'CSRFTokenField'%}
+                {{ item() }}
+            {% elif item.type == 'SubmitField' %}
+            <TR><TD></TD><TD>{{form.submit()}}</TD><TR>
+            {% elif item.type == 'RadioField'%}
+            <TR><TD><h3>{{item.label}}</h3></TD><TD>{{ item(style="list-style:none") }}</TD></TR>
+            {% else %}
+                <TR><TD>{{ item.label }}</TD><TD>{{ item() }}</TD><TR>
+            {% endif %}
+        {% endfor %}
+    <TABLE>
+</form>
+{% endmacro %}
+
+{{q_form(form)}}
